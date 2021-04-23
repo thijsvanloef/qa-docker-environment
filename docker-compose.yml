@@ -44,7 +44,7 @@ services:
             VIRTUAL_HOST: basic.wordpress.test
         volumes:
             - "./wordpress-basic:/var/www/html:cached"
-            - "./plugins:/var/www/html/wp-content/plugins:cached"
+            - "./plugins-basic:/var/www/html/wp-content/plugins:cached"
             - "./config/basic-wordpress-config.php:/tmp/wp-config.php:ro"
             - "./xdebug:/var/xdebug:cached"
             - "./config/php.ini:/usr/local/etc/php/conf.d/custom.ini:cached"
@@ -83,7 +83,7 @@ services:
             VIRTUAL_HOST: local.wordpress.test
         volumes:
             - "./wordpress-local:/var/www/html:cached"
-            - "./plugins:/var/www/html/wp-content/plugins:cached"
+            - "./plugins-local:/var/www/html/wp-content/plugins:cached"
             - "./config/local-wordpress-config.php:/tmp/wp-config.php:ro"
             - "./xdebug:/var/xdebug:cached"
             - "./config/php.ini:/usr/local/etc/php/conf.d/custom.ini:cached"

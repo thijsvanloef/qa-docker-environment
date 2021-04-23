@@ -31,3 +31,10 @@ docker exec local-wordpress wp rewrite flush --hard --allow-root
 echo "***Installing Wordpress plugins for Local***"
 docker exec local-wordpress wp plugin install debug-bar --activate --allow-root
 docker exec local-wordpress wp plugin install query-monitor --activate --allow-root
+
+echo "***Setting correct permissions***"
+docker exec basic-wordpress chmod -R 777 /var/www/html
+docker exec local-wordpress chmod -R 777 /var/www/html
+
+docker exec basic-wordpress chmod -R 777 /var/xdebug
+docker exec local-wordpress chmod -R 777 /var/xdebug
