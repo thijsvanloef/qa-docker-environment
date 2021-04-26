@@ -21,3 +21,20 @@ This will create and start your containers. You can visit your environment by vi
 You can stop your environment by typing: `docker-compose down`
 You can start your environment by typing: `docker-compose up`
 You can start your environment without outputting logs by typing: `docker-compose up -d`
+
+### 3. Connecting to the Database
+
+| Property 	| Value     	|
+|----------	|-----------	|
+| Host     	| 127.0.0.1 	|
+| Username 	| wordpress 	|
+| Password 	| wordpress 	|
+| Database 	| wordpress 	|
+
+=
+The port differs based on the installation you're running.
+
+| Site	            | Port  |
+|-------------------|-------|
+| basic-wordpress   | 1987	|
+| local-wordpress 	| 1988 	|
